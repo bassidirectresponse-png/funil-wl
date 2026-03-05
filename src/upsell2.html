@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Salt Burn - Assistance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { background: '#f8fafc' } } } }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 8px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 8px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-slate-50 font-sans text-slate-900 selection:bg-rose-200 selection:text-rose-900 min-h-screen flex flex-col">
+
+    <script>window.currentPageKey = 'page4';</script>
+
+    <header class="w-full bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="font-extrabold text-xl tracking-tighter flex items-center">
+                <span class="bg-rose-600 text-white p-1.5 rounded-lg mr-2"><i data-lucide="play-circle"
+                        class="w-5 h-5"></i></span> Pink Salt Burn
+            </div>
+
+            <div class="relative group">
+                <button id="langSelectBtn"
+                    class="flex items-center space-x-2 text-sm font-medium text-slate-600 hover:text-slate-900 bg-slate-100 px-3 py-1.5 rounded-full transition-colors cursor-pointer">
+                    <i data-lucide="globe" class="w-4 h-4"></i><span id="currentLangName">Français</span>
+                </button>
+                <div id="langDropdown"
+                    class="absolute right-0 mt-2 w-40 bg-white border border-slate-200 rounded-xl shadow-lg opacity-0 invisible transition-all duration-200 z-50 overflow-hidden">
+                    <button onclick="setLanguage('fr')"
+                        class="w-full text-left px-4 py-2.5 text-sm hover:bg-slate-50 transition-colors text-slate-700">Français</button>
+                    <button onclick="setLanguage('en')"
+                        class="w-full text-left px-4 py-2.5 text-sm hover:bg-slate-50 transition-colors text-slate-700">English</button>
+                    <button onclick="setLanguage('pt')"
+                        class="w-full text-left px-4 py-2.5 text-sm hover:bg-slate-50 transition-colors text-slate-700">Português</button>
+                    <button onclick="setLanguage('es')"
+                        class="w-full text-left px-4 py-2.5 text-sm hover:bg-slate-50 transition-colors text-slate-700">Español</button>
+                    <button onclick="setLanguage('de')"
+                        class="w-full text-left px-4 py-2.5 text-sm hover:bg-slate-50 transition-colors text-slate-700">Deutsch</button>
+                    <button onclick="setLanguage('it')"
+                        class="w-full text-left px-4 py-2.5 text-sm hover:bg-slate-50 transition-colors text-slate-700">Italiano</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main
+        class="flex-1 w-full max-w-4xl mx-auto px-4 py-12 md:py-24 flex flex-col items-center justify-center text-center">
+        <!-- Content specific to page3 (Assistance) styled with blue colors -->
+        <div class="bg-white rounded-3xl shadow-xl border border-slate-100 p-8 md:p-14 w-full relative overflow-hidden">
+            <div
+                class="absolute top-0 right-0 w-64 h-64 bg-blue-500 opacity-10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 w-48 h-48 bg-slate-200 opacity-30 rounded-full blur-2xl -ml-10 -mb-10 pointer-events-none">
+            </div>
+
+            <div class="relative z-10 flex flex-col items-center">
+                <div
+                    class="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 shadow-sm bg-blue-500 text-white">
+                    <i data-lucide="mail" class="w-10 h-10"></i>
+                </div>
+
+                <h1 data-i18n="title" class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
+                    Support Premium Exclusif</h1>
+                <p data-i18n="subtitle" class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl leading-relaxed">Ne
+                    soyez plus jamais seul(e) dans votre parcours. Bénéficiez d'un accompagnement VIP et prioritaire par
+                    e-mail avec notre équipe d'experts.</p>
+
+                <ul
+                    class="space-y-4 mb-10 text-left w-full max-w-lg mx-auto bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                    <li class="flex items-start text-slate-700"><i data-lucide="check-circle-2"
+                            class="w-6 h-6 text-emerald-500 mr-3 shrink-0 mt-0.5"></i><span data-i18n="benefit1"
+                            class="font-medium">Réponses prioritaires en moins de 24h</span></li>
+                    <li class="flex items-start text-slate-700"><i data-lucide="check-circle-2"
+                            class="w-6 h-6 text-emerald-500 mr-3 shrink-0 mt-0.5"></i><span data-i18n="benefit2"
+                            class="font-medium">Accompagnement personnalisé par nos experts</span></li>
+                    <li class="flex items-start text-slate-700"><i data-lucide="check-circle-2"
+                            class="w-6 h-6 text-emerald-500 mr-3 shrink-0 mt-0.5"></i><span data-i18n="benefit3"
+                            class="font-medium">Ajustements de votre protocole sur demande</span></li>
+                </ul>
+
+                <a href="https://pay.mycheckoutt.com/019b944a-b67f-707f-8e28-2c451f4dff5e?ref=" data-i18n="cta"
+                    class="group relative inline-flex items-center justify-center px-8 py-5 text-lg font-bold text-white transition-all duration-200 bg-rose-600 border border-transparent rounded-xl shadow-lg hover:bg-rose-700 focus:outline-none hover:scale-105 hover:shadow-rose-500/30 w-full md:w-auto">
+                    Activer mon Support Premium
+                    <i data-lucide="arrow-right"
+                        class="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+
+                <div class="mt-6 flex items-center justify-center space-x-2 text-sm text-slate-500 font-medium">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i><span>Paiement 100%
+                        Sécurisé</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-300 py-12 px-4 font-sans text-left mt-auto">
+        <div class="max-w-6xl mx-auto flex flex-col gap-8 text-left">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-4">
+                <!-- Légal -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-base">Légal</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><button onclick="openModal('terms')" class="text-rose-500 hover:text-rose-400 transition-colors cursor-pointer text-left">Conditions d'Utilisation</button></li>
+                        <li><button onclick="openModal('privacy')" class="hover:text-white transition-colors cursor-pointer text-left">Politique de Confidentialité</button></li>
+                        <li><button onclick="openModal('refund')" class="hover:text-white transition-colors cursor-pointer text-left">Politique de Remboursement</button></li>
+                        <li><button onclick="openModal('warning')" class="hover:text-white transition-colors cursor-pointer text-left">Avertissement Légal</button></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-base">Contact</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="mailto:vanguardgroup.10m@gmail.com" class="hover:text-white transition-colors flex items-center"><i data-lucide="mail" class="w-4 h-4 mr-2 text-rose-500"></i> vanguardgroup.10m@gmail.com</a></li>
+                        <li class="flex items-center text-slate-300"><i data-lucide="clock" class="w-4 h-4 mr-2 text-rose-500"></i> Lundi - Vendredi, 9h - 18h</li>
+                    </ul>
+                </div>
+
+                <!-- Info Entreprise -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-base">Info Entreprise</h4>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li class="font-semibold text-slate-200">Vanguard Group LTDA</li>
+                        <li>CNPJ: 63.373.434/0001-57</li>
+                        <li class="flex items-start mt-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 mr-2 text-rose-500 shrink-0 mt-0.5"></i>
+                            <span>Rua Jose Maria Resende, 728<br>Loja 4 Quadrasem Saida, Centro<br>São Sebastião da Vargem Alegre - MG</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Avertissement Important -->
+            <div class="bg-slate-800 rounded-xl p-6 text-sm text-slate-300 space-y-4">
+                <h5 class="text-white font-bold mb-2">Avertissement Important</h5>
+                <p>Les informations fournies sont à des fins éducatives uniquement et ne sont pas destinées à servir d'avis médical. Ce protocole est un guide nutritionnel et de mode de vie et n'est pas destiné à diagnostiquer, traiter, guérir ou prévenir une maladie ou une condition médicale.</p>
+                <p>Les résultats individuels peuvent varier en fonction de nombreux facteurs, notamment le respect du protocole, l'état de santé individuel, la génétique et le mode de vie. Les expériences partagées sont des témoignages individuels et ne doivent pas être considérées comme des résultats typiques.</p>
+                <p>Consultez toujours un professionnel de la santé qualifié avant d'apporter des changements importants à votre alimentation ou à votre mode de vie, surtout si vous avez des problèmes de santé préexistants.</p>
+            </div>
+
+            <!-- AVIS IMPORTANT -->
+            <div class="bg-slate-800 rounded-xl p-6 text-xs text-slate-400">
+                <strong class="text-slate-200">AVIS IMPORTANT :</strong> Contenu éducatif. Les résultats peuvent varier d'une personne à l'autre et il n'y a aucune garantie de résultats spécifiques. Ce produit n'a aucun lien, relation ou association avec Meta (Facebook/Instagram), Google, Mundpay ou toute autre entreprise mentionnée.
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="text-center text-xs text-slate-500 pt-4 flex flex-col items-center justify-center space-y-2">
+                <p class="flex items-center"><i data-lucide="copyright" class="w-3 h-3 mr-1"></i> 2025 Vanguard Group LLC. Tous droits réservés.</p>
+                <p>Soutenir votre parcours de bien-être.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <!-- Modal Layout -->
+    <div id="legalModal"
+        class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6 bg-slate-900/60 backdrop-blur-sm transition-opacity opacity-0">
+        <div class="absolute inset-0 cursor-pointer" onclick="closeModal()"></div>
+        <div
+            class="relative bg-white w-full max-w-3xl max-h-[85vh] rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+            <div class="flex items-center justify-between px-6 py-4 border-b border-slate-100 bg-slate-50/50">
+                <h3 id="modalTitle" class="text-xl font-bold text-slate-900">Titre</h3>
+                <button onclick="closeModal()"
+                    class="p-2 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-full transition-colors">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div id="modalContent" class="p-8 overflow-y-auto text-slate-600 text-sm leading-relaxed custom-scrollbar">
+                <!-- Content injected here -->
+            </div>
+            <div class="p-4 border-t border-slate-100 bg-slate-50 flex justify-end">
+                <button onclick="closeModal()" id="modalCloseText"
+                    class="px-6 py-2 bg-slate-900 text-white rounded-lg font-medium hover:bg-slate-800 transition-colors shadow-sm">
+                    Fermer
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="layout.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
